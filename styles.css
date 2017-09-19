@@ -5,6 +5,10 @@ img {
 	max-width: 300px;
 }
 
+#img_src {
+	width: 50%;
+}
+
 .input_box {
 
 }
