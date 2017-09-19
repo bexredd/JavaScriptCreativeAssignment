@@ -10,5 +10,14 @@ img {
 }
 
 .img_box {
-	border-style: solid;
+    position: fixed;
+    border-style: dashed;
+    top: 58px;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    width: 98%;
+    height: 98%;
+    margin: 9px;
 }
