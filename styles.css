@@ -1,10 +1,12 @@
 
 img {
-	border-style: solid;
-	padding: 8px;
-	max-width: 300px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-style: solid;
+    padding: 8px;
+    max-width: 300px;
 }
-
 .input_box {
 
 }
