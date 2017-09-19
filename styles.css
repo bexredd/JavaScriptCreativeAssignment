@@ -4,3 +4,11 @@ img {
 	padding: 8px;
 	max-width: 300px;
 }
+
+.input_box {
+
+}
+
+.img_box {
+	border-style: solid;
+}
