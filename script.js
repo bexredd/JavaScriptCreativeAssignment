@@ -1,20 +1,43 @@
-
 var InitialX = 0;
 var InitialY = 0;
 var mouseDown = false;
 
 var mouseClicked = function(event){
-	mouseDown = true;
+	
+  if(mouseDown == false)
+  {mouseDown = true;
 	InitialX = event.clientX;
 	InitialY = event.clientY;
-  console.log(InitialX);
+  console.log(InitialX);}
 }
 
 var moveImage = function(event){
 	if(mouseDown)
   {
   	var photoID =  event.currentTarget.id;
-  	document.getElementById(photoID).style.top="40px";
+    
+    var XtoAdd = event.clientX - InitialX;
+    var YtoAdd = event.clientY - InitialY;
+    //initial - current + top;
+  	var imgTop = document.getElementById(photoID).style.top;
+    var imgLeft = document.getElementById(photoID).style.left;
+    if(imgTop=="")
+    {
+        console.log("if statement");
+    		document.getElementById(photoID).style.top=XtoAdd +"px";
+        document.getElementById(photoID).style.left=YtoAdd+"px";
+
+    }
+    else
+    {
+    		var top = parseInt(imgTop, 10);
+        var left = parseInt(imgLeft, 10);
+        XtoAdd +=top;
+        YtoAdd += left;
+   			console.log(XtoAdd);
+        document.getElementById(photoID).style.top=XtoAdd +"px";
+        document.getElementById(photoID).style.left=YtoAdd+"px";
+    }
   }
 }
 
