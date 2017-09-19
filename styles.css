@@ -5,6 +5,12 @@ img {
 	max-width: 300px;
 }
 
+
+.new_image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
 .input_box {
 
 }
