@@ -19,5 +19,5 @@ var addImage = function() {
   img += document.getElementById("img_src").value;
   img += '"/>';
   //add code to make this image appear in the middle of the screen(?)
-  document.getElementById("img_pane").innerHTML += img;
+  document.getElementById("img_window").innerHTML += img;
 }
