@@ -6,6 +6,7 @@ var EndTop = 0;
 var EndLeft = 0;
 
 var PictureIDnum = 1;
+var zIndex = 0;
 
 var dragStart = function(event) {
   console.log("dragstart");
@@ -13,8 +14,10 @@ var dragStart = function(event) {
   InitialY = event.clientY;
 
   var photoID = event.currentTarget.id;
-  var top = document.getElementById(photoID).style.top;
-  var left = document.getElementById(photoID).style.left;
+  var image = document.getElementById(photoId);
+  var top = image.style.top;
+  var left = image.style.left;
+  image.style.zIndex = ++zIndex;
   
   if (top == "" && left == "") {
     InitialTop = 0;
@@ -63,9 +66,9 @@ var addImage = function() {
   console.log(PictureIDnum);
   let img = '<img src="';
   img += document.getElementById("img_src").value;
+  img += ' style="z-index:' + (++zIndex) + ';"';
   img += ' "id = "image' + PictureIDnum + '"';
-  img += '" class="new_img" ';
   img += 'ondragStart="dragStart(event)" onDrag="drag(event)" ondragEnd="dragEnd(event)"' + '/>';
-  //add code to make this image appear in the middle of the screen(?)
+  
   document.getElementById("img_window").innerHTML += img;
 }
