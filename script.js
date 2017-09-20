@@ -65,9 +65,9 @@ var addImage = function() {
   PictureIDnum = PictureIDnum + 1;
   console.log(PictureIDnum);
   let img = '<img src="';
-  img += document.getElementById("img_src").value;
+  img += document.getElementById("img_src").value + '"';
   img += ' style="z-index:' + (++zIndex) + ';"';
-  img += ' "id = "image' + PictureIDnum + '"';
+  img += ' id = "image' + PictureIDnum + '"';
   img += 'ondragStart="dragStart(event)" onDrag="drag(event)" ondragEnd="dragEnd(event)"' + '/>';
   
   document.getElementById("img_window").innerHTML += img;
