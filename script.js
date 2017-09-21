@@ -25,6 +25,8 @@ var dragStart = function(event) {
       InitialTop = parseFloat(top,10);
     	InitialLeft = parseFloat(left,10);
   }
+  EndTop= InitialTop;
+  EndLeft = InitialLeft;
 }
 
 var drag = function(event) {
