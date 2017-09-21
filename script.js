@@ -9,7 +9,6 @@ var PictureIDnum = 1;
 var zIndex = 0;
 
 var dragStart = function(event) {
-  console.log(event.currentTarget);
   InitialX = event.clientX;
   InitialY = event.clientY;
 
@@ -63,7 +62,6 @@ var onClickInput = function() {
 
 var addImage = function() {
   PictureIDnum = PictureIDnum + 1;
-  console.log(PictureIDnum);
   let img = '<img src="' + document.getElementById("img_src").value + '"';
   img += ' style="z-index:' + (++zIndex) + ';"';
   img += ' id = "image' + PictureIDnum + '"';
