@@ -9,12 +9,12 @@ var PictureIDnum = 1;
 var zIndex = 0;
 
 var dragStart = function(event) {
-  console.log("dragstart");
+  console.log(event.currentTarget);
   InitialX = event.clientX;
   InitialY = event.clientY;
 
   var photoID = event.currentTarget.id;
-  var image = document.getElementById(photoId);
+  var image = document.getElementById(photoID);
   var top = image.style.top;
   var left = image.style.left;
   image.style.zIndex = ++zIndex;
@@ -33,8 +33,9 @@ var drag = function(event) {
   var XtoAdd = event.clientX - InitialX + InitialLeft;
   var YtoAdd = event.clientY - InitialY + InitialTop;
 
-  document.getElementById(photoID).style.top = YtoAdd + "px";
-  document.getElementById(photoID).style.left = XtoAdd + "px";
+	var image = document.getElementById(photoID);
+  image.style.top = YtoAdd + "px";
+  image.style.left = XtoAdd + "px";
 
   if (YtoAdd <= 100 + EndTop && YtoAdd >= EndTop - 100) {
     EndTop = YtoAdd;
@@ -44,13 +45,12 @@ var drag = function(event) {
 
 var dragEnd = function(event) {
   var photoID = event.currentTarget.id;
-  var top = document.getElementById(photoID).style.top;
-  document.getElementById(photoID).style.top = EndTop + "px";
-  document.getElementById(photoID).style.left = EndLeft + "px";
+  var image = document.getElementById(photoID);
+  var top = image.style.top;
+  image.style.top = EndTop + "px";
+  image.style.left = EndLeft + "px";
   InitialTop = EndTop;
   InitialLeft = EndLeft;
-
-  console.log(top);
 }
 
 
