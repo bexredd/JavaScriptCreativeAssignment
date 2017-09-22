@@ -11,7 +11,8 @@ img {
 
 .img_box {
     position: fixed;
-    border-style: dashed;
+    border-style: double;
+    background-color:#506484;
     top: 150px;
     left: 0;
     right: 0px;
@@ -25,6 +26,12 @@ img {
 #img_src {
 	width: 50%;
 }
+
 .input_box{
   text-align:center;
+  color:white;
+}
+
+body{
+    background-color:#252e3d;
 }
